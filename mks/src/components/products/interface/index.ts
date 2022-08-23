@@ -3,7 +3,7 @@ export default interface IStateProducts {
     isOpen: boolean,
   }
   products: {
-    products: {products: [
+    products: [
       {
         id: number,
         name: string,
@@ -15,7 +15,7 @@ export default interface IStateProducts {
         updatedAt: string
       }
       
-    ]}
+    ]
   },
   buyProducts: {
     buyProducts: [

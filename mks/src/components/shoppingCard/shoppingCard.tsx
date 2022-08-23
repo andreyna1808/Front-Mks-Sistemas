@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { CloseCard, OpenCard } from "../../redux/reducers/openCard";
+import { ListenCardClose, ListenCardOpen } from "../../redux/reducers/openCard";
 import {
   BoxFooter,
   BoxPrice,
@@ -69,7 +69,7 @@ const ShoppingCard = () => {
           <BoxTitleIcon>
             <H1>Carrinho de Compras</H1>
             <AiFillCloseCircle
-              onClick={() => dispatch(CloseCard())}
+              onClick={() => dispatch(ListenCardClose())}
               style={{ marginRight: "40px", cursor: "pointer" }}
               size={38}
             />
@@ -131,7 +131,7 @@ const ShoppingCard = () => {
           </BoxFooter>
         </BoxShoppinCard>
       ) : (
-        <ButtonBuy onClick={() => dispatch(OpenCard())}>
+        <ButtonBuy onClick={() => dispatch(ListenCardOpen())}>
           <FaShoppingCart style={{ marginRight: "10px", width: "20px" }} />
           {values.length}
         </ButtonBuy>

@@ -21,14 +21,17 @@ import Footer from "../footer";
 import { AddProductCard } from "../../redux/reducers/buyProducts";
 import { Skeleton } from "@mui/material";
 import IStateProducts from "./interface";
+import axios from "axios";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const { products, openCard, buyNewProduct } = useSelector((state: IStateProducts) => ({
-    products: state?.products?.products?.products,
-    openCard: state?.openCard?.isOpen,
-    buyNewProduct: state?.buyProducts?.buyProducts,
-  }));
+  const { products, openCard, buyNewProduct } = useSelector(
+    (state: IStateProducts) => ({
+      products: state?.products?.products,
+      openCard: state?.openCard?.isOpen,
+      buyNewProduct: state?.buyProducts?.buyProducts,
+    })
+  );
 
   const buyProduct = (dataProducts) => {
     const filter = buyNewProduct.filter((data) => data.id === dataProducts.id);
@@ -39,7 +42,14 @@ const Products = () => {
   };
 
   useEffect(() => {
-    dispatch(GetProducts());
+    const getAPI = async () => {
+      const res = await axios.get(process.env.NEXT_PUBLIC_GET_PRODUCTS).then((response) => response.data.products);
+      dispatch(GetProducts(res));
+    };
+
+    getAPI();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   return (
