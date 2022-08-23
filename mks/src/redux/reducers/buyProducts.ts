@@ -13,7 +13,7 @@ const slice = createSlice({
     RemoveProductCard: (state, action) => {
       state.buyProducts = state.buyProducts.filter((b) => b.id !== action.payload)
     },
-    RemoveAllProducts: (state, action) => {
+    RemoveAllProducts: (state) => {
       state.buyProducts = []
     },
     MoreQuantity: (state, action) => {

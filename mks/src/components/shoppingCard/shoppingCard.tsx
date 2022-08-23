@@ -21,12 +21,13 @@ import {
 } from "./styleShoppingCard";
 import ToastAnimated, { showToast } from "../../assessts/ui-lib";
 import { LessQuantity, MoreQuantity, RemoveAllProducts, RemoveProductCard } from "../../redux/reducers/buyProducts";
+import IStateShoppingCard from "./interface";
 
 const ShoppingCard = () => {
   const dispatch = useDispatch();
-  const { isOpenCard, buyNewProduct } = useSelector((state) => ({
-    isOpenCard: state.openCard.isOpen,
-    buyNewProduct: state.buyProducts.buyProducts,
+  const { isOpenCard, buyNewProduct } = useSelector((state: IStateShoppingCard) => ({
+    isOpenCard: state?.openCard?.isOpen,
+    buyNewProduct: state?.buyProducts?.buyProducts,
   }));
   const [ values, setValues ] = useState([])
 

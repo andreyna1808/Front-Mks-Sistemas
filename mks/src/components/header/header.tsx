@@ -1,12 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ShoppingCard from "../shoppingCard/shoppingCard";
+import IStateHeader from "./interface";
 import { ContainerHeader, DivContainerText, H1, Subtitle } from "./styleHeader";
 
 const Header = () => {
   const { openCard } = useSelector(
-    (state) => ({
-      openCard: state.openCard.isOpen,
+    (state: IStateHeader) => ({
+      openCard: state?.openCard?.isOpen,
     })
   );
   

@@ -20,13 +20,14 @@ import Header from "../header";
 import Footer from "../footer";
 import { AddProductCard } from "../../redux/reducers/buyProducts";
 import { Skeleton } from "@mui/material";
+import IStateProducts from "./interface";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const { products, openCard, buyNewProduct } = useSelector((state) => ({
-    products: state.products.products.products,
-    openCard: state.openCard.isOpen,
-    buyNewProduct: state.buyProducts.buyProducts,
+  const { products, openCard, buyNewProduct } = useSelector((state: IStateProducts) => ({
+    products: state?.products?.products?.products,
+    openCard: state?.openCard?.isOpen,
+    buyNewProduct: state?.buyProducts?.buyProducts,
   }));
 
   const buyProduct = (dataProducts) => {
