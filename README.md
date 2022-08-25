@@ -1,6 +1,6 @@
 # MKS SISTEMAS
 
-### Veja o projeto: https://depoy-agora-vai-mks.vercel.app/
+### Veja o projeto: https://deploy-mks-system.vercel.app/
 ### :hammer: Funcionalidades do projeto
 
 - `Funcionalidade 1`: Visualizar os produtos.
@@ -19,26 +19,42 @@
 - TypeScript
 - Jest
 
+[![Habilidades front-end](https://skillicons.dev/icons?i=html,css,js,ts,next,styledcomponents,materialui,jest,redux
+)](https://skillicons.dev)
+
 ### Como utilizar o projeto
 
 ##### 1- Clonar o repositório
 
-  ❯ git clone git@github.com:andreyna1808/Front-Mks-Sistemas.git. 
+```bash
+  git clone git@github.com:andreyna1808/Front-Mks-Sistemas.git. 
+```
   
    Ou...
    
-  ❯ git clone https://github.com/andreyna1808/Front-Mks-Sistemas.git
+```bash
+  git clone https://github.com/andreyna1808/Front-Mks-Sistemas.git
+```
 
 ##### 2- Entrar no diretório
-  ❯ cd mks
-    
+
+```bash
+  cd mks
+```
+
 ##### 3- Para instalar as dependências e iniciar o projeto, você pode utilizar o NPM ou outro de sua preferência:
 
  ###### Instalar as dependências
-  ❯ npm install
+ 
+```bash
+  npm install
+```
 
  ###### Iniciar o projeto
-  ❯ npm dev
+ 
+```bash
+  npm dev
+```
 
 ##### 4- Se preferir, recomendo utilizar o docker:
 
@@ -50,5 +66,8 @@ e
 
 https://docs.docker.com/compose/install/
 
-### Autora
+### Project developer by Andreyna Carvalho
+
   [<img src="https://avatars.githubusercontent.com/u/87716793?v=4" width=115><br><sub>Andreyna Carvalho</sub>](https://github.com/andreyna1808)
+  
+
