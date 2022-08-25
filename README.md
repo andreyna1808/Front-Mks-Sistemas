@@ -27,7 +27,7 @@
 ##### 1- Clonar o repositório
 
 ```bash
-  git clone git@github.com:andreyna1808/Front-Mks-Sistemas.git. 
+  git clone git@github.com:andreyna1808/Front-Mks-Sistemas.git
 ```
   
    Ou...
